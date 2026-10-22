@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>轻松熊捏捏乐 · Squishy-Kuma</title>
+  <meta name="description" content="一只软乎乎的小熊，一小段属于自己的放松时间。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='%23c99450'%3E%3Ccircle cx='15' cy='15' r='11'/%3E%3Ccircle cx='49' cy='15' r='11'/%3E%3Crect x='7' y='12' width='50' height='43' rx='21'/%3E%3C/g%3E%3Cellipse cx='32' cy='39' rx='11' ry='8' fill='%23fff0cb'/%3E%3Cg fill='%2334251f'%3E%3Ccircle cx='21' cy='30' r='3'/%3E%3Ccircle cx='43' cy='30' r='3'/%3E%3Ccircle cx='32' cy='37' r='3'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./static/style.css">
+  <script type="importmap">{"imports":{"three":"./static/vendor/three.module.js"}}</script>
+</head>
+<body>
+<svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+ <symbol id="i-bear" viewBox="0 0 32 32"><path d="M7 12C1 8 4 2 9 5l3 3h8l3-3c5-3 8 3 2 7 5 14-23 17-18 0Z"/><circle cx="11" cy="16" r="1"/><circle cx="21" cy="16" r="1"/><path d="m14 21 2-2 2 2m-2-2v-1"/></symbol>
+ <symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 5-5 4H3v6h3l5 4V5Zm4 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+ <symbol id="i-mute" viewBox="0 0 24 24"><path d="m11 5-5 4H3v6h3l5 4V5Zm5 4 5 6m0-6-5 6"/></symbol>
+ <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol>
+ <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2c0 7-3 10-10 10 7 0 10 3 10 10 0-7 3-10 10-10-7 0-10-3-10-10Z"/></symbol>
+ <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S2 14 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 6-10 12-10 12Z"/></symbol>
+ <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7M6 10v10h12V10m-8 10v-6h4v6"/></symbol>
+</defs></svg>
+<header class="topbar">
+ <div class="brand"><span class="brand-mark"><svg><use href="#i-bear"/></svg></span><span>Squishy<span class="brand-dash">–</span>Kuma<span class="brand-dot">.</span></span></div>
+ <div class="top-actions">
+  <div class="language" role="group" aria-label="切换语言"><button id="lang-zh" lang="zh" aria-pressed="true">中文</button><span>/</span><button id="lang-en" lang="en" aria-pressed="false">EN</button></div>
+  <span class="action-divider"></span>
+  <button class="sound-button" id="sound" aria-pressed="true"><svg><use id="sound-icon" href="#i-sound"/></svg><span id="sound-label">声音开启</span></button>
+ </div>
+</header>
+<main class="playground">
+ <div class="scene-heading"><div class="eyebrow"><span></span><span data-i18n="eyebrow">留一点时间，给自己</span></div><h1 data-i18n="title">轻松熊捏捏乐</h1><p data-i18n="subtitle">把烦恼，轻轻捏走。</p></div>
+ <section class="feel-panel" aria-labelledby="feel-title">
+  <div class="panel-heading"><span class="mini-flower">✳</span><span class="panel-kicker" data-i18n="panelKicker">一点点，刚好的柔软</span></div>
+  <h2 id="feel-title" data-i18n="feelTitle">调一调，刚刚好</h2><p class="panel-note" data-i18n="feelNote">今天，想要哪一种柔软？</p>
+  <div class="slider-group"><div class="slider-heading"><label for="softness" data-i18n="softness">柔软度</label><output for="softness" id="softness-value">72</output></div><input type="range" id="softness" min="0" max="100" value="72"><div class="range-labels"><span data-i18n="firm">偏硬</span><span data-i18n="soft">超软</span></div></div>
+  <div class="slider-group"><div class="slider-heading"><label for="bounce" data-i18n="bounce">回弹程度</label><output for="bounce" id="bounce-value">52</output></div><input type="range" id="bounce" min="0" max="100" value="52"><div class="range-labels"><span data-i18n="slow">慢慢恢复</span><span data-i18n="springy">弹力满满</span></div></div>
+  <div class="panel-line"></div><h3 data-i18n="presets">手感预设</h3>
+  <div class="presets" role="group" aria-label="手感预设">
+   <button class="preset" data-preset="mochi"><span class="preset-icon mochi">◒</span><span data-i18n="mochi">软糯麻薯</span><span class="preset-dot"></span></button>
+   <button class="preset selected" data-preset="classic"><span class="preset-icon classic"><svg><use href="#i-bear"/></svg></span><span data-i18n="classic">经典捏捏</span><span class="preset-dot"></span></button>
+   <button class="preset" data-preset="pudding"><span class="preset-icon pudding">◓</span><span data-i18n="pudding">弹力布丁</span><span class="preset-dot"></span></button>
+  </div>
+  <button class="reset-shape" id="reset-shape"><svg><use href="#i-reset"/></svg><span data-i18n="resetShape">一键复原</span></button>
+  <p class="reset-note" data-i18n="resetNote">给小熊一个全新的拥抱</p>
+ </section>
+ <div id="viewport" class="viewport" aria-busy="true"><canvas id="bear-canvas" aria-label="可按压和拖拽的立体小熊"></canvas>
+  <div class="loading" id="loading"><span class="loading-bear"><svg><use href="#i-bear"/></svg></span><p id="loading-text" data-i18n="loading">正在唤醒软乎乎的小熊…</p><p id="error-detail" hidden></p><button id="retry" data-i18n="retry" hidden>重新加载</button></div>
+  <span class="decor-spark spark-one"><svg><use href="#i-spark"/></svg></span><span class="decor-spark spark-two">✧</span>
+  <div class="scene-caption"><span class="caption-dot"></span><span id="scene-status" role="status">按住小熊，放松一下</span></div>
+  <button id="home-view" class="home-view" aria-label="回到正面" title="回到正面"><svg><use href="#i-home"/></svg></button>
+ </div>
+ <aside class="count-panel"><div class="count-title"><svg><use href="#i-heart"/></svg><span data-i18n="countLabel">捏走的小烦恼</span></div><div class="count-number-row"><strong id="count">0</strong><span data-i18n="countUnit">次捏捏</span></div><button id="reset-count"><svg><use href="#i-reset"/></svg><span data-i18n="resetCount">清零次数</span></button></aside>
+</main>
+<footer class="footer"><div class="hint"><span class="mouse-icon"></span><span id="operation-hint" data-i18n="hint">左键捏捏 · 右键旋转 · 滚轮缩放</span></div><span class="footer-message"><svg><use href="#i-spark"/></svg><span data-i18n="footer">不着急，慢慢来。</span></span></footer>
+<div class="toast" id="toast" role="status"></div>
+<noscript>请启用 JavaScript 后游玩。 / Please enable JavaScript to play.</noscript>
+<script type="module" src="./static/js/app.js"></script>
+</body></html>
