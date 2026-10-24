@@ -1,6 +1,6 @@
 import {Store,PRESETS} from './state.js';
 import {t} from './i18n.js';
-import {SquishAudio} from './audio.js';
+import {SquishAudio,bindAudioGestures} from './audio.js';
 
 const $=id=>document.getElementById(id);
 let storage;try{storage=window.localStorage;}catch{}
@@ -37,13 +37,13 @@ for(const key of ['softness','bounce'])$(key).addEventListener('input',event=>st
 document.querySelectorAll('[data-preset]').forEach(button=>button.onclick=()=>{const preset=button.dataset.preset;store.update({...PRESETS[preset],preset});});
 $('reset-count').onclick=()=>{store.clearCount();toast('countReset');};
 $('reset-shape').onclick=()=>{scene?.reset();toast('shapeReset');};$('home-view').onclick=()=>scene?.home();$('retry').onclick=()=>location.reload();
-document.addEventListener('pointerdown',()=>audio.unlock(),{passive:true});
+bindAudioGestures(document,audio);
 function showError(key){errorKey=key;$('loading').hidden=false;$('error-detail').hidden=false;$('retry').hidden=false;$('viewport').setAttribute('aria-busy','false');render();}
 try{
   const {createScene}=await import('./scene.js');
   scene=createScene({canvas:$('bear-canvas'),viewport:$('viewport'),getSettings:()=>store.value,
-    onPress(){store.press();audio.unlock().then(()=>audio.play('press',store.value.bounce));},
-    onRelease(){audio.play('release',store.value.bounce);},
+    onPress(){store.press();void audio.playFromGesture('press',store.value.bounce);},
+    onRelease(){void audio.playFromGesture('release',store.value.bounce);},
     onStatus(key){status=key;$('scene-status').textContent=t(store.value.lang,key);},onError:showError});
   $('loading').hidden=true;$('viewport').setAttribute('aria-busy','false');
 }catch(error){console.error('Squishy-Kuma initialization:',error);showError(/webgl|context/i.test(error.message)?'error':'loadError');}
