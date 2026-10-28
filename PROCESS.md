@@ -15,9 +15,11 @@ I used two AI tools during the project:
 
 I first tested the experience on my computer. The interaction and sound feedback worked in that test. I then uploaded the project to GitHub and used a GitHub Pages workflow to publish a public website.
 
-## 3. A Design Suggestion I Changed
+## 3. What I reject
 
 The first AI-generated version showed a complete bear with a body and limbs. I felt that this version looked awkward and did not match the cute, simple appearance I wanted.
+
+![First version screenshot](docs/screenshots/first-version.png)
 
 I supplied a reference image and asked Codex to revise the model so that it consisted only of the bear’s head.
 
