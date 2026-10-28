@@ -17,7 +17,7 @@ The project is designed for anyone who wants a quick, gentle break in the browse
 The recording will demonstrate the sound effects, local deformation, dragging, and spring-back animation.
 
 <!-- Replace YOUR_VIDEO_ID with the ID from your uploaded YouTube video. -->
-[Watch the Squishy-Kuma screen recording on YouTube](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[Watch the Squishy-Kuma screen recording on vimeo](https://vimeo.com/1240124605)
 
 ## Main Interaction
 
