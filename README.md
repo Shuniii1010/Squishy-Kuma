@@ -1,9 +1,6 @@
 # Squishy-Kuma
 
 Squishy-Kuma is a small 3D stress-relief game that runs in the browser. It recreates a soft, head-only bear squishy with rounded ears and a matte toy-like finish. Press or drag anywhere on the bear to create a local dent, then release it and watch it spring back.
-<p align="center">
-  <img src="https://sdmax.co.uk/wp-content/uploads/2026/09/Jumbo-Peach-Squishy-Toys-wholesale.-11%C3%9714cm.webp" width="300" alt="Peach Squishy Toy">
-</p>
 
 The project is designed for anyone who wants a quick, gentle break in the browser. The interface is simple enough for first-time players, while adjustable softness and bounce settings let users find the feel they enjoy most.
 
