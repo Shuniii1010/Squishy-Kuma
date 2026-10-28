@@ -16,7 +16,7 @@ The project is designed for anyone who wants a quick, gentle break in the browse
 
 The recording will demonstrate the sound effects, local deformation, dragging, and spring-back animation.
 
-<!-- Replace YOUR_VIDEO_ID with the ID from your uploaded YouTube video. -->
+
 [Watch the Squishy-Kuma screen recording on vimeo](https://vimeo.com/1240124605)
 
 ## Main Interaction
@@ -53,6 +53,10 @@ Three presets are included: **Soft Mochi**, **Classic Squish**, and **Bouncy Pud
 - Static GitHub Pages build and optional local Flask server
 
 ## Run Locally
+
+```bash
+uv run --with-requirements requirements.txt python app.py
+```
 
 ### macOS or Linux
 

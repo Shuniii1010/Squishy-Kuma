@@ -19,7 +19,7 @@ I used two AI tools during the project:
 
 I first tested the experience on my computer. The interaction and sound feedback worked in that test. I then uploaded the project to GitHub and used a GitHub Pages workflow to publish a public website.
 
-## 3. What I reject
+## 3. What I changed
 
 The first AI-generated version showed a complete bear with a body and limbs. I felt that this version looked awkward and did not match the cute, simple appearance I wanted.
 
