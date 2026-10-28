@@ -57,8 +57,8 @@ Three presets are included: **Soft Mochi**, **Classic Squish**, and **Bouncy Pud
 ```bash
 uv run --with-requirements requirements.txt python app.py
 ```
-
-### macOS or Linux
+### Alternative: using venv and pip
+#### macOS or Linux
 
 Python 3.10 or later is required. Open a terminal in the project folder and run:
 
@@ -76,7 +76,7 @@ After the dependencies have been installed once, future sessions only require:
 .venv/bin/python app.py
 ```
 
-### Windows
+#### Windows
 
 Install Python 3.10 or later and enable the option that adds Python to `PATH`. Open PowerShell in the project folder and run:
 
