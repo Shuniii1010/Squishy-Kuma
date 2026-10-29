@@ -4,9 +4,7 @@
 
 My idea came from physical silicone squishy toys. Their soft texture and gentle sounds make squeezing them relaxing. I wanted to recreate a similar experience on phones and computers, allowing people to take a short break whenever they wanted.
 
-<p align="center">
-  <img src="https://sdmax.co.uk/wp-content/uploads/2026/09/Jumbo-Peach-Squishy-Toys-wholesale.-11%C3%9714cm.webp" width="300" alt="Peach Squishy Toy">
-</p>
+![My squishy toys](docs/pics/squishy-toys.png)
 
 Since a screen cannot reproduce the physical sensation of silicone, I focused on visual deformation, bounce, and sound feedback. I also wanted users to personalise the experience by adjusting the bear’s softness and bounce.
 
